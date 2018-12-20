@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -24,6 +25,8 @@ import com.example.shield.util.SectionPositionColorUtil;
 
 public class RowDividerAgent extends LightAgent {
 
+    private static final String TAG = "fengbincao";
+    
     private RowDividerViewCell mRowDividerViewCell;
 
     public RowDividerAgent(Fragment fragment, DriverInterface bridge, PageContainerInterface pageContainer) {
@@ -34,12 +37,25 @@ public class RowDividerAgent extends LightAgent {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mRowDividerViewCell = new RowDividerViewCell(getContext());
-
+        Log.d(TAG, "RowDividerAgent onCreate: ");
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        Log.d(TAG, "RowDividerAgent onResume: ");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "RowDividerAgent onPause: ");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "RowDividerAgent onDestroy: ");
     }
 
     @Override

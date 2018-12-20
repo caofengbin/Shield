@@ -3,6 +3,7 @@ package com.example.shield.divider.agent;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -22,6 +23,8 @@ import com.example.shield.util.SectionPositionColorUtil;
 
 public class SectionDividerAgent extends LightAgent {
 
+    private static final String TAG = "fengbincao";
+
     private SectionDividerViewCell mSectionDividerViewCell;
 
     public SectionDividerAgent(Fragment fragment, DriverInterface bridge, PageContainerInterface pageContainer) {
@@ -32,12 +35,26 @@ public class SectionDividerAgent extends LightAgent {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mSectionDividerViewCell = new SectionDividerViewCell(getContext());
+        Log.d(TAG, "SectionDividerAgent onCreate: ");
 
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        Log.d(TAG, "SectionDividerAgent onResume: ");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "SectionDividerAgent onPause: ");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "SectionDividerAgent onDestroy: ");
     }
 
     @Override
