@@ -1,9 +1,9 @@
 buildscript {
     repositories {
-        maven {
-            url "http://maven.oa.com/nexus/content/groups/androidbuild"
-        }
-//        jcenter()
+//        maven {
+//            url "http://maven.oa.com/nexus/content/groups/androidbuild"
+//        }
+        jcenter()
 //        google()
 //        mavenCentral()
     }
@@ -16,10 +16,10 @@ buildscript {
 allprojects {
     repositories {
 //        google()
-//        jcenter()
-        maven {
-            url "http://maven.oa.com/nexus/content/groups/androidbuild"
-        }
+        jcenter()
+//        maven {
+//            url "http://maven.oa.com/nexus/content/groups/androidbuild"
+//        }
     }
     configurations.all {
         resolutionStrategy {
