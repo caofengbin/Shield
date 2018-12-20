@@ -24,12 +24,6 @@ public class DividerAgentConfig implements AgentListConfig {
         String[][][] agentArray = {
                 {
                         {"default_divider", AGENT_PKG_NAME + "DefaultDividerAgent"}
-                },
-                {
-                        {"section_divider", AGENT_PKG_NAME + "SectionDividerAgent"}
-                },
-                {
-                        {"row_divider", AGENT_PKG_NAME + "RowDividerAgent"}
                 }
         };
         return AgentInfoHelper.getAgents(agentArray);
