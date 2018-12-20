@@ -15,12 +15,14 @@ import com.example.shield.fragments.AbsExampleFragment;
 import java.util.ArrayList;
 
 /**
+ * 第一个入口界面Fragment
  * Created by bingweizhou on 17/7/12.
  */
 
 public class DividerFragment extends AbsExampleFragment {
 
     RecyclerView mRecyclerView;
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Nullable
     @Override

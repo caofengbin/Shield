@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
+ * demo界面中的主Fragment
  * Created by bingweizhou on 17/7/12.
  */
 

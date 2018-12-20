@@ -20,7 +20,11 @@ import com.example.shield.status.StatusFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 存放各个入口Fragment的创建流程位置
+ */
 public class FragmentFactory {
+
     public static final FragmentFactory instance = new FragmentFactory();
     private List<AbsExampleFragment> fragments;
 
